@@ -1,7 +1,9 @@
 #include "Keiler.dtsi"
+#include <dt-bindings/gpio/gpio.h> /* ADD THIS LINE */
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-direct";
+    label = "KSCAN"; /* ADD THIS LINE */
     input-gpios
     = <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
     , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
