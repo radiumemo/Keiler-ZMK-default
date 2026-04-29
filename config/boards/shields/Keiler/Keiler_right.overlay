@@ -1,4 +1,5 @@
 #include "Keiler.dtsi"
+#include <dt-bindings/gpio/gpio.h> 
 
 &default_transform {
 	col-offset = <18>;
@@ -6,6 +7,7 @@
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-direct";
+    label = "KSCAN";
     input-gpios
     = <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
     , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
